@@ -37,7 +37,7 @@ Til sidst skal bilen testes med en så detaljeret test som muligt.
 public class Car {
 
     private String password;
-    public boolean engineOn = false;
+    public static boolean engineOn = false;
     public boolean airconditionOn = false;
 
     Car() {

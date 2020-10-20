@@ -31,10 +31,36 @@ public class CarLight {
 
 
     public static void turnOnLight(){
-        CarLight myCar = new CarLight();
-//        System.out.println(myCar.leftTurnSignal);
-        System.out.println("Carlight type: " + myCar.type + " is on.");
-        System.out.println("Carlight: front(" + myCar.carlightFrontOn + ") and back(" + myCar.carlightBackOn + ")");
-        System.out.println("Right and left turn signal is: right(" + myCar.rightTurnSignal + "), left(" + myCar.leftTurnSignal + ")");
+        if(Car.engineOn==true){
+            CarLight myCar = new CarLight();
+            //        System.out.println(myCar.leftTurnSignal);
+            System.out.println("Carlight type: " + myCar.type + " is on.");
+            System.out.println("Carlight: front(" + myCar.carlightFrontOn + ") and back(" + myCar.carlightBackOn + ")");
+            System.out.println("Right and left turn signal is: right(" + myCar.rightTurnSignal + "), left(" + myCar.leftTurnSignal + ")");
+        }else{
+            System.out.println("The lights are turned off because the car is off.");
+        }
+    }
+
+    public static void turnSignalLeftOn() throws InterruptedException {
+        if(Car.engineOn==true){
+            CarLight myCar = new CarLight();
+            //for every blink turn of and on
+            myCar.leftTurnSignal = true;
+
+            while(myCar.leftTurnSignal == true){
+                    myCar.leftTurnSignal = false;
+                    System.out.println("false");
+
+                    //delay
+                    Thread.sleep(1000); // do nothing for 1000 miliseconds (1 second)
+
+                    myCar.leftTurnSignal = true;
+                    System.out.println("true");
+                }
+
+        }else{
+            System.out.println("All lights are turned off because the car is off.");
+        }
     }
 }

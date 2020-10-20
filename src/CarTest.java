@@ -22,37 +22,47 @@ public class CarTest {
         System.out.println("******************* TEST ENGINE *******************");
         System.out.println("");
 
-        System.out.print("Test 1 (bilen skal være tændt): ");
+        System.out.print("# Test 1 (bilen skal være tændt): ");
         testStartCarWithCorrectKey();
-        System.out.print("Test 2 (bilen skal ikke være tændt): ");
+        System.out.print("# Test 2 (bilen skal ikke være tændt): ");
         testStartCarWithWrongKey();
 
         System.out.println("");
         System.out.println("******************* TEST AIRCONDITION ON *******************");
         System.out.println("");
 
-        System.out.print("Test 3 (Aircondition skal være slukket, fordi bilen er slukket): ");
+        System.out.print("# Test 3 (Aircondition skal være slukket, fordi bilen er slukket): ");
         testStartAirconditionEngineOff();
-        System.out.print("Test 4 (Aircondition skal gå fra at være slukket til at tændes, fordi bilen er tændt): ");
+        System.out.print("# Test 4 (Aircondition skal gå fra at være slukket til at tændes, fordi bilen er tændt): ");
         testStartAirconditionEngineOn();
-        System.out.print("Test 5 (Aircondition er allerede tændt og bilen er tændt): ");
+        System.out.print("# Test 5 (Aircondition er allerede tændt og bilen er tændt): ");
         testStartAirconditionEngineOnAirconOn();
 
         System.out.println("");
         System.out.println("******************* TEST AIRCONDITION OFF *******************");
         System.out.println("");
 
-        System.out.print("Test 6 (Aircondition bliver slukket, mens bilen er tændt): ");
+        System.out.print("# Test 6 (Aircondition bliver slukket, mens bilen er tændt): ");
         testAirconditionOff();
-        System.out.print("Test 7 (Aircondition bliver slukket, fordi bilen slukkes): ");
+        System.out.print("# Test 7 (Aircondition bliver slukket, fordi bilen slukkes): ");
         testAirconditionOffEngineOff();
 
         System.out.println("");
         System.out.println("******************* TEST CARLIGHTS *******************");
         System.out.println("");
 
-        System.out.print("Test 8 (Carlight default set when the car is on): ");
+        System.out.print("# Test 8 (Carlight default set when the car is on): ");
         testCarLightDefaultSettings();
+
+        System.out.print("# Test 9 (Carlight off when the car is off): ");
+        testCarLightsEngineOff();
+
+        System.out.print("# Test 10 (turnSignalLeftOn - blinks when it is set to on): ");
+        try {
+            testTurnSignalLeftOn();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
     }
 
@@ -119,5 +129,21 @@ public class CarTest {
         myCar.turnCarOn(); // turns car on with the correct key
         CarLight myLight = new CarLight();
         myLight.turnOnLight(); // set default settings for the carLight
+    }
+
+    // Test 9: CarLight off when car is off
+    private static void testCarLightsEngineOff(){
+        Car myCar = new Car();
+        myCar.engineOn=false; // turns car off
+        CarLight myLight = new CarLight();
+        myLight.turnOnLight(); // set default settings for the carLight
+    }
+
+    // Test 10: turnSignalLeftOn - blinks when it is set to on
+    private static void testTurnSignalLeftOn() throws InterruptedException {
+        Car myCar = new Car();
+        myCar.engineOn=true; // turns car off
+        CarLight myLight = new CarLight();
+        myLight.turnSignalLeftOn(); // set default settings for the carLight
     }
 }
