@@ -1,5 +1,13 @@
-# Programmeringsøvelse - Bil.java og BilTest.java
-## Vi vil modellere en bil mhp. at kunne gøre den selvkørende på sigt. 
+# Car project 2020
+## I have made elements for the self-driven car. 
+- Aircondition (on/off when the car is on)
+- CarLight (on/off when the car is on, also enum with LightTypes, turnSignalLights that blinks when on/off, normal light both front and back on/off).
+- Car with a turnEngineOn with a specific key. 
+- CarTest with tests to se the functionallity.  
+
+
+### Programmeringsøvelse - Bil.java og BilTest.java
+ Vi vil modellere en bil mhp. at kunne gøre den selvkørende på sigt. 
 
 I skal udvikle 2 klasser, Car.java og CarTest.java, som hhv. repræsenterer en bil og tester en bil. 
 
