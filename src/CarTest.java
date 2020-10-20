@@ -138,7 +138,7 @@ public class CarTest {
 
     // Test 8: Set the default settings for the CarLight
     // expected to have frontlight and backlight on
-    // type = naerlys.
+    // type = NAERLYS - enum.
     // turn signals false
 
     private static void testCarLightDefaultSettings(){
