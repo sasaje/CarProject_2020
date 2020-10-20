@@ -10,13 +10,12 @@ public class CarLight {
 
     public boolean carlightFrontOn;
     public boolean carlightBackOn;
-//    public String type;
+//  public String type;
      enum lightType{
         NAERLYS,
         FJERNLYS,
         PARKERINGSLYS
     }
-
 
     //turn signals
     public boolean rightTurnSignal; //right turn signal - both back and front
