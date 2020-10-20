@@ -60,6 +60,14 @@ public class CarLight {
             System.out.println("All lights are turned off because the car is off.");
         }
     }
+
+    public static void turnSignalLeftOff(){
+        CarLight myCarLight = new CarLight();
+        myCarLight.leftTurnSignal = false;
+        System.out.println("The leftTurnSignal is now off.");
+    }
+
+
     public static void turnSignalRightOn() throws InterruptedException {
         if(Car.engineOn==true){
             CarLight myCar = new CarLight();
@@ -78,4 +86,12 @@ public class CarLight {
             System.out.println("All lights are turned off because the car is off.");
         }
     }
+
+
+    public static void turnSignalRightOff(){
+        CarLight myCarLight = new CarLight();
+        myCarLight.rightTurnSignal = false;
+        System.out.println("The rightTurnSignal is now off.");
+    }
+
 }

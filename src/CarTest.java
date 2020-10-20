@@ -57,6 +57,10 @@ public class CarTest {
         System.out.print("# Test 9 (Carlight off when the car is off): ");
         testCarLightsEngineOff();
 
+        System.out.println("");
+        System.out.println("******************* TEST TURNING SIGNALS *******************");
+        System.out.println("");
+
         System.out.print("# Test 10 (turnSignalLeftOn - blinks when it is set to on): ");
         try {
             testTurnSignalLeftOn();
@@ -70,6 +74,11 @@ public class CarTest {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
+        System.out.print("# Test 12 (turnSignalLeft off when set to false): ");
+        testTurnSignalLeftOff();
+        System.out.print("# Test 13 (turnSignalRight off when set to false): ");
+        testTurnSignalRightOff();
 
     }
 
@@ -163,4 +172,14 @@ public class CarTest {
         //remove comment bellow to test this case
         // myLight.turnSignalRightOn(); // set default settings for the carLight
     }
+
+    // Test 12: turnSignalRight false - expected to be false
+    private static void testTurnSignalRightOff(){
+        CarLight.turnSignalRightOff();
+    }
+    // Test 13: turnSignalLeft false - expected to be false
+    private static void testTurnSignalLeftOff(){
+        CarLight.turnSignalLeftOff();
+    }
+
 }
