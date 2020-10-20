@@ -58,6 +58,7 @@ public class Car {
     public void turnCarOn(){
         CarKey key = new CarKey("password1234");
         turnEngineOn(key);
+//        CarLight.turnOnLight(); // set default settings for the carLight
     }
 
     public void turnAirconditionOn(boolean airconditionOn){

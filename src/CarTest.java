@@ -47,6 +47,13 @@ public class CarTest {
         System.out.print("Test 7 (Aircondition bliver slukket, fordi bilen slukkes): ");
         testAirconditionOffEngineOff();
 
+        System.out.println("");
+        System.out.println("******************* TEST CARLIGHTS *******************");
+        System.out.println("");
+
+        System.out.print("Test 8 (Carlight default set when the car is on): ");
+        testCarLightDefaultSettings();
+
     }
 
     //Test 1 : start engine with the correct key - expected to pass
@@ -100,5 +107,17 @@ public class CarTest {
         Car myCar = new Car();
         myCar.engineOn =false; // turns car off
         myCar.turnAirconditionOff();
+    }
+
+    // Test 8: Set the default settings for the CarLight
+    // expected to have frontlight and backlight on
+    // type = naerlys.
+    // turn signals false
+
+    private static void testCarLightDefaultSettings(){
+        Car myCar = new Car();
+        myCar.turnCarOn(); // turns car on with the correct key
+        CarLight myLight = new CarLight();
+        myLight.turnOnLight(); // set default settings for the carLight
     }
 }
