@@ -61,14 +61,14 @@ public class CarTest {
         System.out.println("******************* TEST TURNING SIGNALS *******************");
         System.out.println("");
 
-        System.out.print("# Test 10 (turnSignalLeftOn - blinks when it is set to on): ");
+        System.out.println("# Test 10 (turnSignalLeftOn - blinks when it is set to on - no result check comments): ");
         try {
             testTurnSignalLeftOn();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
-        System.out.print("# Test 11 (turnSignalRightOn - blinks when it is set to on): ");
+        System.out.println("# Test 11 (turnSignalRightOn - blinks when it is set to on - no result check comments): ");
         try {
             testTurnSignalRightOn();
         } catch (InterruptedException e) {
@@ -94,6 +94,7 @@ public class CarTest {
         Car myCar = new Car();
         CarKey key = new CarKey("hest");
         myCar.turnEngineOn(key);
+
     }
 
     //Test 3 : start the aircondition - expected to fail because the engine is not on
