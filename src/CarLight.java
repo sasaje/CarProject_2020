@@ -49,16 +49,31 @@ public class CarLight {
             myCar.leftTurnSignal = true;
 
             while(myCar.leftTurnSignal == true){
-                    myCar.leftTurnSignal = false;
-                    System.out.println("false");
+                myCar.leftTurnSignal = false;
+                System.out.println("false");
+                //delay
+                Thread.sleep(1000); // do nothing for 1000 miliseconds (1 second)
+                myCar.leftTurnSignal = true;
+                System.out.println("true");
+            }
+        }else{
+            System.out.println("All lights are turned off because the car is off.");
+        }
+    }
+    public static void turnSignalRightOn() throws InterruptedException {
+        if(Car.engineOn==true){
+            CarLight myCar = new CarLight();
+            //for every blink turn of and on
+            myCar.rightTurnSignal = true;
 
-                    //delay
-                    Thread.sleep(1000); // do nothing for 1000 miliseconds (1 second)
-
-                    myCar.leftTurnSignal = true;
-                    System.out.println("true");
-                }
-
+            while(myCar.rightTurnSignal == true){
+                myCar.rightTurnSignal = false;
+                System.out.println("false");
+                //delay
+                Thread.sleep(1000); // do nothing for 1000 miliseconds (1 second)
+                myCar.rightTurnSignal = true;
+                System.out.println("true");
+            }
         }else{
             System.out.println("All lights are turned off because the car is off.");
         }

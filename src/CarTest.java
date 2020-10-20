@@ -64,6 +64,13 @@ public class CarTest {
             e.printStackTrace();
         }
 
+        System.out.print("# Test 11 (turnSignalRightOn - blinks when it is set to on): ");
+        try {
+            testTurnSignalRightOn();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
     }
 
     //Test 1 : start engine with the correct key - expected to pass
@@ -144,6 +151,16 @@ public class CarTest {
         Car myCar = new Car();
         myCar.engineOn=true; // turns car off
         CarLight myLight = new CarLight();
-        myLight.turnSignalLeftOn(); // set default settings for the carLight
+        //remove comment bellow to test this case
+        // myLight.turnSignalLeftOn(); // set default settings for the carLight
+    }
+
+    // Test 11: turnSignalRightOn - blinks when it is set to on
+    private static void testTurnSignalRightOn() throws InterruptedException {
+        Car myCar = new Car();
+        myCar.engineOn=true; // turns car off
+        CarLight myLight = new CarLight();
+        //remove comment bellow to test this case
+        // myLight.turnSignalRightOn(); // set default settings for the carLight
     }
 }
