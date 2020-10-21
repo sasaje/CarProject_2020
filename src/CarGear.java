@@ -29,25 +29,28 @@ public class CarGear {
         // gear 4 == <40km/h
         // gear 5 == <50km/h
         // gear R == 0km/h - reverse gear TODO
-
-        if(currentSpeed==0){
-            myGear = Gear.GEARNEUTRAL;
-            System.out.println(myGear);
-        }else if(currentSpeed > 0 && currentSpeed < 10){
-            myGear = Gear.GEAR1;
-            System.out.println(myGear);
-        }else if(currentSpeed >= 10 && currentSpeed < 25){
-            myGear = Gear.GEAR2;
-            System.out.println(myGear);
-        }else if(currentSpeed >= 25 && currentSpeed < 40){
-            myGear = Gear.GEAR3;
-            System.out.println(myGear);
-        }else if(currentSpeed >= 40 && currentSpeed < 50){
-            myGear = Gear.GEAR4;
-            System.out.println(myGear);
-        }else if(currentSpeed >= 50){
-            myGear = Gear.GEAR5;
-            System.out.println(myGear);
+        if(Car.engineOn == true) {
+            if(currentSpeed==0){
+                myGear = Gear.GEARNEUTRAL;
+                System.out.println(myGear);
+            }else if(currentSpeed > 0 && currentSpeed < 10){
+                myGear = Gear.GEAR1;
+                System.out.println(myGear);
+            }else if(currentSpeed >= 10 && currentSpeed < 25){
+                myGear = Gear.GEAR2;
+                System.out.println(myGear);
+            }else if(currentSpeed >= 25 && currentSpeed < 40){
+                myGear = Gear.GEAR3;
+                System.out.println(myGear);
+            }else if(currentSpeed >= 40 && currentSpeed < 50){
+                myGear = Gear.GEAR4;
+                System.out.println(myGear);
+            }else if(currentSpeed >= 50){
+                myGear = Gear.GEAR5;
+                System.out.println(myGear);
+            }
+        }else{
+            System.out.println("Sorry the car is not on, please turn on the car to change gears");
         }
     }
 }
