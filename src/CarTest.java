@@ -86,6 +86,17 @@ public class CarTest {
         System.out.print("# Test 13 (turnSignalRight off when set to false): ");
         testTurnSignalRightOff();
 
+        System.out.println("");
+        System.out.println("******************* TEST COLOR *******************");
+        System.out.println("");
+
+        System.out.print("# Test 14 (check default color set to SILVER): ");
+        testColor();
+
+        System.out.print("# Test 15 (change color set to BLUE): ");
+        testChangeColor();
+
+
     }
 
 
@@ -195,5 +206,14 @@ public class CarTest {
         CarLight.turnSignalLeftOff();
     }
 
+    // Test 14: Check the default color of the car
+    private static void testColor(){
+        CarColor.setDefaultCarColor();
+    }
+
+    // Test 15: change color to BLUE
+    private static void testChangeColor(){
+        CarColor.changeCarColor();
+    }
 
 }

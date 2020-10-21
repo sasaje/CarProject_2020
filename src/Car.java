@@ -44,6 +44,7 @@ public class Car {
         this.password = "password1234";
         this.engineOn = false;
         this.airconditionOn = false;
+        CarColor.myCarColor = Color.SILVER;
     }
 
     public void turnEngineOn(CarKey key) {
@@ -60,6 +61,9 @@ public class Car {
         turnEngineOn(key);
 //        CarLight.turnOnLight(); // set default settings for the carLight
     }
+
+    //TODO move to CarAircondition
+
     public void turnAirconditionOn(boolean airconditionOn){
         if(engineOn == true) {
             if (airconditionOn == true) {
@@ -73,6 +77,7 @@ public class Car {
         }
     }
 
+    //TODO move to CarAircondition
     public void turnAirconditionOff(){
         if(engineOn==true){
             airconditionOn = false;
@@ -82,8 +87,6 @@ public class Car {
         }
     }
 
-    private static void testEnum(){
-        System.out.println("Enging state" + EngineState.OFF);
-    }
+
 }
 
