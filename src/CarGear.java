@@ -7,14 +7,7 @@
  */
 
 public class CarGear {
-    enum Gear{
-        GEARNEUTRAL,
-        GEAR1,
-        GEAR2,
-        GEAR3,
-        GEAR4,
-        GEAR5
-    }
+
     public static void main(String[] args) {
 
         int currentSpeed = 0;

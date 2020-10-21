@@ -10,12 +10,7 @@ public class CarLight {
 
     public boolean carlightFrontOn;
     public boolean carlightBackOn;
-//  public String type;
-     enum lightType{
-        NAERLYS,
-        FJERNLYS,
-        PARKERINGSLYS
-    }
+    //  public String type;
 
     //turn signals
     public boolean rightTurnSignal; //right turn signal - both back and front
@@ -40,7 +35,7 @@ public class CarLight {
             CarLight myCar = new CarLight();
             //        System.out.println(myCar.leftTurnSignal);
 //            System.out.println("Carlight type: " + myCar.type + " is on.");
-            lightType myLightType = lightType.NAERLYS;
+            LightType myLightType = LightType.NAERLYS;
             System.out.println("Carlight type: " + myLightType);
             System.out.println("Carlight: front(" + myCar.carlightFrontOn + ") and back(" + myCar.carlightBackOn + ")");
             System.out.println("Right and left turn signal is: right(" + myCar.rightTurnSignal + "), left(" + myCar.leftTurnSignal + ")");
@@ -98,6 +93,4 @@ public class CarLight {
         myCarLight.rightTurnSignal = false;
         System.out.println("The rightTurnSignal is now off.");
     }
-
-
 }
