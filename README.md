@@ -2,7 +2,7 @@
 ## I have made elements for the self-driven car. 
 - Car with a turnEngineOn with a specific key. 
 - CarTest with tests to se the functionallity.  
-- Aircondition (on/off when the car is on)
+- Aircondition (on/off when the car is on) , CarAirconditionChangeTemp() method added
 - CarLight (on/off when the car is on, also enum with LightTypes, turnSignalLights that blinks when on/off, normal light both front and back on/off).
 - CarGear (which can change gear in relation to the currentSpeed).
 
