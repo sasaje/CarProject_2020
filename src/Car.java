@@ -60,7 +60,6 @@ public class Car {
         turnEngineOn(key);
 //        CarLight.turnOnLight(); // set default settings for the carLight
     }
-
     public void turnAirconditionOn(boolean airconditionOn){
         if(engineOn == true) {
             if (airconditionOn == true) {
@@ -82,9 +81,5 @@ public class Car {
             System.out.println("Aircondition is already off because the car is off.");
         }
     }
-
-
-
-
 }
 
