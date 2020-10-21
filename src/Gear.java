@@ -4,5 +4,6 @@ public enum Gear {
     GEAR2,
     GEAR3,
     GEAR4,
-    GEAR5
+    GEAR5,
+    GEARREVERSE //TODO
 }
