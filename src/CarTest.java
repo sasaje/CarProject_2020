@@ -16,7 +16,8 @@ public class CarTest {
         System.out.println("");
         System.out.println("******************* TEST ENUM *******************");
         System.out.println("");
-        System.out.println("Enum: " + EngineState.OFF);
+        System.out.print("Enum - ");
+        testEnum();
 
         System.out.println("");
         System.out.println("******************* TEST TESTSUITE *******************");
@@ -85,6 +86,12 @@ public class CarTest {
         System.out.print("# Test 13 (turnSignalRight off when set to false): ");
         testTurnSignalRightOff();
 
+    }
+
+
+    // Enum test:
+    private static void testEnum(){
+        System.out.println("EngineState: " + EngineState.OFF);
     }
 
     //Test 1 : start engine with the correct key - expected to pass
@@ -187,7 +194,6 @@ public class CarTest {
     private static void testTurnSignalLeftOff(){
         CarLight.turnSignalLeftOff();
     }
-
 
 
 }
