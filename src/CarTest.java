@@ -14,6 +14,11 @@ public class CarTest {
 
     private static void testSuite() {
         System.out.println("");
+        System.out.println("******************* TEST ENUM *******************");
+        System.out.println("");
+        System.out.println("Enum: " + EngineState.OFF);
+
+        System.out.println("");
         System.out.println("******************* TEST TESTSUITE *******************");
         System.out.println("");
         System.out.println("Testsuiten kører.");
@@ -182,5 +187,7 @@ public class CarTest {
     private static void testTurnSignalLeftOff(){
         CarLight.turnSignalLeftOff();
     }
+
+
 
 }

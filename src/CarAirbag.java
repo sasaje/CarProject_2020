@@ -9,4 +9,27 @@
 public class CarAirbag {
 
     public boolean airbag;
+
+    public static void main(String[] args) {
+
+        if(Car.engineOn == true){
+
+        }else{
+            System.out.println("Sorry can't check the airbags because the car is not on.");
+        }
+
+    }
+
+    public void checkAirbagStatus(){
+
+    }
+    public void turnAirbagOn(){
+
+    }
+
+    public void turnAirbagOff(){
+
+    }
+
 }
+
