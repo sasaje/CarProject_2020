@@ -62,13 +62,12 @@ public class Garage {
         System.out.println("Garagen indeholder så mange elementer: " + allCars.length);
 */
         // **************Assignment above**************** //
-        Car[] myCars = new Car[5]; // skaber 5 pladser i hukommelsen
-        for (int i = 0; i < myCars.length; i++) {
+        Car[] myCars = new Car[5]; // creates room to five new cars in the memory
+        for (int i = 0; i < myCars.length; i++) { // five new cars in the array
             myCars[i] = new Car();
             CarKey myCarKey = new CarKey("password1234");
             myCars[i].turnEngineOn(myCarKey);
-            myCars[i].light.turnOnLight(); //tænder lyset
-//            CarLight.turnOnLight();
+            myCars[i].light.turnOnLight(); // set the lights to on on all objects of the type Car.
             System.out.println("Elements uniq ID: " + myCars[i].toString() + " are created.");
         }
     }
