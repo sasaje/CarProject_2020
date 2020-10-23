@@ -16,11 +16,9 @@ public class Objekter {
         Car car = new Car();
         System.out.println(car.toString());
 
-
         int a;
 
         Object b;
         Object c;
-
     }
 }

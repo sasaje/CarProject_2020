@@ -87,7 +87,5 @@ public class Car {
             System.out.println("Aircondition is already off because the car is off.");
         }
     }
-
-
 }
 
