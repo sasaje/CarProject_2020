@@ -5,30 +5,71 @@
  * 21/10/2020
  *
  */
-
 public class Garage {
 
-    static Car[] allCars = new Car[100]; // Et Array - Der kan være 100 biler (objekter) i garagen og antallet kan ikke
-    // lige justeres efterfølgende.
+    static Car[] allCars = new Car[1000000];
+    int[] randomTal = new int[100];
+    int[] godeTal = {8, 7, 13};
 
-    int[] randomTal = new int[100]; // arrayList afgrænset, men du kan ændre antal objekter i løbende
-    int[] numbers = {8,7,13}; // arrayList afgrænset, men du kan ændre antal objekter i løbende
-    static Object[] objects = new Object[10];
+    static Object[] objekter = new Object[10];
+    int x = 5;
+    Integer y = 8;
 
     public static void main(String[] args) {
-        allCars[0] = new Car(); // fra nu kan bilen bruges
-        allCars[0].turnAirconditionOff();
-//        allCars[0].turnEngineOn(); need a carKey to work
 
-        for (int i = 0; i < 100; i++) {
-            allCars[i] = new Car(); // laver alle biler i garagen.
+        Car car1 = new Car();
+        CarKey key = new CarKey("password1234");
+        car1.turnEngineOn(key);
+        Car car2 = new Car();
+        car1.turnEngineOn(key);
+        Car car3 = new Car();
+        car1.turnEngineOn(key);
+        Car car4 = new Car();
+        car1.turnEngineOn(key);
+        Car car5 = new Car();
+        car1.turnEngineOn(key);
+        Car car6 = new Car();
+        car1.turnEngineOn(key);
+        Car car7 = new Car();
+        car1.turnEngineOn(key);
+        Car car8 = new Car();
+        car1.turnEngineOn(key);
+        Car car9 = new Car();
+
+        // Vælg en klasse du selv har lavet
+        // Lav et array med 1000000 elementer
+        // Udskriv deres unikke ID (toString())
+        // Kald en selvvalgt metode på klassen på hvert objekt
+
+/*        Car[] cars = new Car[1000000]; //skaber array med 1000000 biler
+        for (int i = 0; i < cars.length; i++) {
+            cars[i] = new Car();
+            System.out.print(i + ". ");
+            System.out.println(cars[i].toString());
+            CarKey key2 = new CarKey("password1234");
+            cars[i].turnEngineOn(key2);
+            cars[i].turnAirconditionOn(true);
+        }
+        allCars[0] =  new Car();
+        allCars[0].turnAirconditionOn(true);
+
+        for (int i = 0; i < 1000000; i++) {
+            allCars[i] = new Car();
         }
 
-        // Objekt array
-        objects[0] = new Car();
-        objects[1] = new Garage();
-        System.out.println("The Garage contains " + objects.length + " elements");
-
-
+        objekter[0] = new Car();
+        objekter[1] = new Garage();
+        System.out.println("Garagen indeholder så mange elementer: " + allCars.length);
+*/
+        // **************Assignment above**************** //
+        Car[] myCars = new Car[5]; // skaber 5 pladser i hukommelsen
+        for (int i = 0; i < myCars.length; i++) {
+            myCars[i] = new Car();
+            CarKey myCarKey = new CarKey("password1234");
+            myCars[i].turnEngineOn(myCarKey);
+            myCars[i].light.turnOnLight(); //tænder lyset
+//            CarLight.turnOnLight();
+            System.out.println("Elements uniq ID: " + myCars[i].toString() + " are created.");
+        }
     }
 }

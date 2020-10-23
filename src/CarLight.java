@@ -29,8 +29,7 @@ public class CarLight {
         rightTurnSignal = false;
     }
 
-
-    public static void turnOnLight(){
+    public void turnOnLight(){
         if(Car.engineOn==true){
             CarLight myCar = new CarLight();
             //        System.out.println(myCar.leftTurnSignal);
