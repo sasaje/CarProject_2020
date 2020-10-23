@@ -39,7 +39,7 @@ public class Car {
     private String password;
     public static boolean engineOn = false;
     public boolean airconditionOn = false;
-    public CarLight light = new CarLight();
+    public CarLight light = new CarLight(); // set all new cars to have light on
 
     Car() {
         this.password = "password1234";
